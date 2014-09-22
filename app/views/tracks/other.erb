@@ -1,0 +1,16 @@
+<p>
+  Posts by: <%= @author %>
+</p>
+
+<p>
+  <% @tracks.each do |track| %>
+    -- Posted: <%= track.created_at %><br>
+    Artist: <%= track.artist %><br>
+    Title: <%= track.title %><br>
+    <a href="<%= track.link %>"><%= track.link %></a>
+    </p>
+  <% end %>
+</p>
+
+<hr/>
+<a href="/tracks">Back to All tracks</a>
